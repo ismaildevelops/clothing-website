@@ -1,0 +1,278 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+	<title>Women's Section</title>
+	
+	<!--The link generated for Font for <h1> tag for our webisite from google fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+	<!--The link generated for Font for <h3> tag for our webisite from google fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+	<!--The link generated for Font for <h3> tag for our webisite from google fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script>
+		var clicks = 0;
+		var ID = 0;
+		var price = 0;
+
+		function adder(price5) {
+			clicks = clicks + 1;
+			document.getElementById('clicks22').innerHTML = clicks;
+			
+			price = price5 + price;
+
+
+			document.getElementById('clicks23').innerHTML = price +" "+ " $";
+			sessionStorage.setItem("clicks",clicks);
+			sessionStorage.setItem("price",price);
+		}
+		function rem(price5){
+			clicks = clicks - 1;
+			document.getElementById('clicks22').innerHTML = clicks;
+			if (clicks<0) {
+				clicks = 0;
+			}
+			document.getElementById('clicks22').innerHTML =clicks;
+			console.log(clicks);
+			price = price - price5;	
+			document.getElementById('clicks23').innerHTML = price +" "+ " $";
+			if (price<0.0) {
+				price = 0;
+			}
+			document.getElementById('clicks23').innerHTML = price +" "+ " $";
+			sessionStorage.setItem("clicks",clicks);
+			sessionStorage.setItem("price",price);
+
+		}
+	</script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="row" style="user-select: none;">
+			<div class="col-lg-12">
+				<h1 style="text-align:center;">Clothes 4 All</h1>
+			</div>
+
+			<div class="row" style="user-select: none;">
+				<div class="col-lg-12">
+				<h3 style="text-align:center;margin-top: -1%;">Be exclusive | Be yourself</h3>
+			</div>
+			</div>
+			
+		</div>
+	<div class="row">
+			<div class="col-lg-12" style="margin-top: 0%;">
+    <ul class="nav navbar-nav" style="margin-left: 16%;">
+      
+      <li><a href="index.html">Home</a></li>
+      <li><a href="men.html">Men's Clothing</a></li>
+      <li><a href="women.html">Women's clothing</a></li>
+      <li><a href="kid.html">Kid's clothing</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  	</div>
+	
+			
+		</div>
+		<div class="row">
+			<div class="col-lg-12" style="margin-top: 3%;">
+				<h2  style="text-align:center;font-family: 'Josefin Sans', sans-serif;
+				font-weight: bold;color: yellowgreen;font-size: 70px;">Women's Section</h2>
+				<br>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="jumbotron" style="background-image: url('img/g1.jpg');background-size: contain;border:5px solid green;background-size:cover;">
+						<h4  style="text-align:center;color: white;background-color: transparent;font-weight: bold;font-family: 'Josefin Sans', sans-serif; text-shadow: 2px 2px 2px #000000;font-size: 50px;">
+						Select any 5 of your favourite Clothes to get discounts and much more.<br>Be exclusive this SEASON with our offers and be YOURSELF.s</h4>
+						<br>
+
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12" style="text-align:center;margin-top: -5%;">
+					
+					<a style="font-size: 30px;font-family:'Josefin Sans', sans-serif; " href="payment.html" class="btn btn-success" role="button">Click for Payment</a>
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6" style="text-align:center;margin-top: 4%;border: 2px solid green;">
+					<h4><b>Items in your cart</b></h4><br>
+					<p id="clicks22" style="font-size: 30px;">0</p>
+				</div>
+				<div class="col-lg-6" style="text-align:center;margin-top: 4%;
+				border:2px solid green;">
+					<h4 >Price of your selected Items</h4><br>
+					<p id="clicks23" style="font-size: 30px;">0.0 $</p>
+				</div>
+
+			</div>
+			<div class="row" style="margin-top: 4%;">
+				<div class="col-lg-3" style="padding-right: 2px;">
+					<img alt="Something went wrong" src="img/g6.jpg" style="background-size: contain;height: 150px;width: 100%;" class="img-fluid">
+					<p  style="text-align:center;">Article ID:215980</p>
+					<p style="text-align:center;">Price: 180$</p>
+					<p>180</p>
+
+					<p><b>For the bold and exclusive people who dare to leap.</b><br>
+					Add this in your cart</p>
+					<button type="button" class="btn btn-success"  onclick="adder(180);">Add to Cart</button>
+					<button type="button" class="btn btn-success"  onclick="rem(180);">Remove from Cart</button>
+				</div>
+				<div class="col-lg-3" style="padding-right: 2px;">
+					<img alt="Something went wrong" src="img/g4.jpg" style="background-size: contain;height: 150px;width: 100%;" class="img-fluid">
+					<p  style="text-align:center;">Article ID:215980</p>
+					<p style="text-align:center;">Price: 170$</p>
+					<p>170</p>
+
+					<p><b>For the bold and exclusive people who dare to leap.</b><br>
+					Add this in your cart</p>
+					<button type="button" class="btn btn-success"  onclick="adder(170);">Add to Cart</button>
+					<button type="button" class="btn btn-success"  onclick="rem(170);">Remove from Cart</button>
+				</div>
+				<div class="col-lg-3" style="padding-right: 2px;">
+					<img alt="Something went wrong" src="img/g7.jpg" style="background-size: contain;height: 150px;width: 100%;" class="img-fluid">
+					<p  style="text-align:center;">Article ID:215980</p>
+					<p style="text-align:center;">Price: 40$</p>
+					<p>40</p>
+
+					<p><b>For the bold and exclusive people who dare to leap.</b><br>
+					Add this in your cart</p>
+					<button type="button" class="btn btn-success"  onclick="adder(40);">Add to Cart</button>
+					<button type="button" class="btn btn-success"  onclick="rem(40);">Remove from Cart</button>
+				</div>
+				<div class="col-lg-3" style="padding-right: 2px;">
+					<img alt="Something went wrong" src="img/g8.jpg" style="background-size: contain;height: 150px;width: 100%;" class="img-fluid">
+					<p  style="text-align:center;">Article ID:215980</p>
+					<p style="text-align:center;">Price: 1180$</p>
+					<p>1180</p>
+
+					<p><b>For the bold and exclusive people who dare to leap.</b><br>
+					Add this in your cart</p>
+					<button type="button" class="btn btn-success"  onclick="adder(1180);">Add to Cart</button>
+					<button type="button" class="btn btn-success"  onclick="rem(1180);">Remove from Cart</button>
+				</div>
+			</div>
+			<div class="row" style="margin-top: 4%;">
+				<div class="col-lg-3" style="padding-right: 2px;">
+					<img alt="Something went wrong" src="img/g3.jpg" style="background-size: contain;height: 150px;width: 100%;" class="img-fluid">
+					<p  style="text-align:center;">Article ID:215980</p>
+					<p style="text-align:center;">Price: 18$</p>
+					<p>18</p>
+
+					<p><b>For the bold and exclusive people who dare to leap.</b><br>
+					Add this in your cart</p>
+					<button type="button" class="btn btn-success"  onclick="adder(18);">Add to Cart</button>
+					<button type="button" class="btn btn-success"  onclick="rem(18);">Remove from Cart</button>
+				</div>
+				<div class="col-lg-3" style="padding-right: 2px;">
+					<img alt="Something went wrong" src="img/g5.jpg" style="background-size: contain;height: 150px;width: 100%;" class="img-fluid">
+					<p  style="text-align:center;">Article ID:215980</p>
+					<p style="text-align:center;">Price: 100$</p>
+					<p>100</p>
+
+					<p><b>For the bold and exclusive people who dare to leap.</b><br>
+					Add this in your cart</p>
+					<button type="button" class="btn btn-success"  onclick="adder(100);">Add to Cart</button>
+					<button type="button" class="btn btn-success"  onclick="rem(100);">Remove from Cart</button>
+				</div>
+				<div class="col-lg-3" style="padding-right: 2px;">
+					<img alt="Something went wrong" src="img/g3.jpg" style="background-size: contain;height: 150px;width: 100%;" class="img-fluid">
+					<p  style="text-align:center;">Article ID:215980</p>
+					<p style="text-align:center;">Price: 45$</p>
+					<p>45</p>
+
+					<p><b>For the bold and exclusive people who dare to leap.</b><br>
+					Add this in your cart</p>
+					<button type="button" class="btn btn-success"  onclick="adder(45);">Add to Cart</button>
+					<button type="button" class="btn btn-success"  onclick="rem(45);">Remove from Cart</button>
+				</div>
+				<div class="col-lg-3" style="padding-right: 2px;">
+					<img alt="Something went wrong" src="img/g4.jpg" style="background-size: contain;height: 150px;width: 100%;" class="img-fluid">
+					<p  style="text-align:center;">Article ID:215980</p>
+					<p style="text-align:center;">Price: 27$</p>
+					<p>27</p>
+
+					<p><b>For the bold and exclusive people who dare to leap.</b><br>
+					Add this in your cart</p>
+					<button type="button" class="btn btn-success"  onclick="adder(27);">Add to Cart</button>
+					<button type="button" class="btn btn-success"  onclick="rem(27);">Remove from Cart</button>
+				</div>
+			</div>
+			<div class="row" style="margin-top: 4%;">
+				<div class="col-lg-3" style="padding-right: 2px;">
+					<img alt="Something went wrong" src="img/g4.jpg" style="background-size: contain;height: 150px;width: 100%;" class="img-fluid">
+					<p  style="text-align:center;">Article ID:215980</p>
+					<p style="text-align:center;">Price: 13$</p>
+					<p>13</p>
+
+					<p><b>For the bold and exclusive people who dare to leap.</b><br>
+					Add this in your cart</p>
+					<button type="button" class="btn btn-success"  onclick="adder(13);">Add to Cart</button>
+					<button type="button" class="btn btn-success"  onclick="rem(13);">Remove from Cart</button>
+				</div>
+				<div class="col-lg-3" style="padding-right: 2px;">
+					<img alt="Something went wrong" src="img/g9.jpg" style="background-size: contain;height: 150px;width: 100%;" class="img-fluid">
+					<p  style="text-align:center;">Article ID:215980</p>
+					<p style="text-align:center;">Price: 987$</p>
+					<p>987</p>
+
+					<p><b>For the bold and exclusive people who dare to leap.</b><br>
+					Add this in your cart</p>
+					<button type="button" class="btn btn-success"  onclick="adder(987);">Add to Cart</button>
+					<button type="button" class="btn btn-success"  onclick="rem(987);">Remove from Cart</button>
+				</div>
+				<div class="col-lg-3" style="padding-right: 2px;">
+					<img alt="Something went wrong" src="img/g8.jpg" style="background-size: contain;height: 150px;width: 100%;" class="img-fluid">
+					<p  style="text-align:center;">Article ID:2159980</p>
+					<p style="text-align:center;">Price: 244$</p>
+					<p>244</p>
+
+					<p><b>For the bold and exclusive people who dare to leap.</b><br>
+					Add this in your cart</p>
+					<button type="button" class="btn btn-success"  onclick="adder(244);">Add to Cart</button>
+					<button type="button" class="btn btn-success"  onclick="rem(244);">Remove from Cart</button>
+				</div>
+				<div class="col-lg-3" style="padding-right: 2px;">
+					<img alt="Something went wrong" src="img/g7.jpg" style="background-size: contain;height: 150px;width: 100%;" class="img-fluid">
+					<p  style="text-align:center;">Article ID:9215980</p>
+					<p style="text-align:center;">Price: 1780$</p>
+					<p>1780</p>
+
+					<p><b>For the bold and exclusive people who dare to leap.</b><br>
+					Add this in your cart</p>
+					<button type="button" class="btn btn-success"  onclick="adder(1780);">Add to Cart</button>
+					<button type="button" class="btn btn-success"  onclick="rem(1780);">Remove from Cart</button>
+				</div>
+			</div>
+			<br><br><br><br>
+
+			
+		</div>
+		<div class="row">
+			<div class="col-lg-12" style="background-color:#FF5733;margin-top: 3%">
+				<h5 style="color: white;font-weight: bold;">Created by Smart Tech Ltd </h5>
+				
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>
